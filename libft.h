@@ -3,11 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaimenevado <jaimenevado@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jnevado- <jnevado-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 18:29:48 by jnevado-          #+#    #+#             */
-/*   Updated: 2022/05/15 16:24:43 by jnevado-         ###   ########.fr       */
-/*   Updated: 2022/05/15 15:25:53 by jnevado-         ###   ########.fr       */
+/*   Updated: 2022/05/17 18:09:29 by jnevado-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +36,7 @@ int				ft_strncmp(char *s1, char *s2, unsigned int n);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 char			*ft_strnstr(const void *big, const char *little, size_t len);
-int				ft_atoi(int n);
+int				ft_atoi(const char *str);
 //Funciones con Malloc()
 void			*ft_calloc(size_t count, size_t size);
 char			*ft_strdup(const char *s1);
@@ -46,4 +45,10 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
+char			*ft_itoa(int n);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 #endif

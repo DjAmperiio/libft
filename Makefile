@@ -10,7 +10,11 @@ SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 		ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
 		ft_putnbr_fd.c
+
+SRCSB	= ft_lstnew.c
+
 OBJS	= $(SRCS:.c=.o)
+OBJSB	= $(SRCSB:.c=.o)
 CC		= gcc
 CFLAGS	= -Wall -Werror -Wextra
 NAME	= libft.a
@@ -18,7 +22,7 @@ NAME	= libft.a
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	ar -rc $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)
@@ -28,6 +32,7 @@ fclean: clean
 
 re: fclean all
 
-bonus: all
+bonus: $(OBJSB) $(OBJS)
+	ar -rc $(NAME) $(OBJSB) $(OBJS)
 
-.PHONY: clean fclear re all
+.PHONY: clean fclear re all bonus

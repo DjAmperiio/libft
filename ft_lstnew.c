@@ -6,7 +6,7 @@
 /*   By: jnevado- <jnevado-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:49:54 by jnevado-          #+#    #+#             */
-/*   Updated: 2022/05/18 18:56:42 by jnevado-         ###   ########.fr       */
+/*   Updated: 2022/05/19 18:21:30 by jnevado-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;
 
-
-
-
+	new_node = ft_calloc(sizeof(t_list), 1);
+	if (!new_node)
+		return (0);
+	new_node->content = content;
+	return (new_node);
 }

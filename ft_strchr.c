@@ -6,7 +6,7 @@
 /*   By: jnevado- <jnevado-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 15:24:55 by jnevado-          #+#    #+#             */
-/*   Updated: 2022/05/06 17:24:20 by jnevado-         ###   ########.fr       */
+/*   Updated: 2022/05/19 18:37:47 by jnevado-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*str;
-
-	str = (char *)s;
-	while (*str != c)
-	{
-		if (*str == '\0')
-			return (0);
-		str++;
-	}
-	return (str);
+	while (*(char *)s != (char)c && *s)
+		s++;
+	if (*s == (char)c)
+		return ((char *)s);
+	return (0);
 }

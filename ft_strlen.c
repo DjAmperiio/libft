@@ -6,13 +6,15 @@
 /*   By: jnevado- <jnevado-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 11:21:01 by jnevado-          #+#    #+#             */
-/*   Updated: 2022/05/09 16:43:18 by jnevado-         ###   ########.fr       */
+/*   Updated: 2022/05/19 18:28:23 by jnevado-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {	
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (*str)

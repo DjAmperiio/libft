@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jnevado- <jnevado-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 18:49:54 by jnevado-          #+#    #+#             */
-/*   Updated: 2022/05/19 18:21:30 by jnevado-         ###   ########.fr       */
+/*   Created: 2022/05/20 12:27:04 by jnevado-          #+#    #+#             */
+/*   Updated: 2022/05/20 16:14:13 by jnevado-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*new_node;
+	t_list	*list;
 
-	new_node = ft_calloc(sizeof(t_list), 1);
-	if (!new_node)
-		return (0);
-	new_node->content = content;
-	return (new_node);
+	if (lst == NULL)
+		return (NULL);
+	list = lst->next;
+	while (list)
+	{
+		lst = list;
+		list = lst->next;
+	}
+	return (lst);
 }

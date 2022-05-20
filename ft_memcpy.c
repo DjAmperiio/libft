@@ -6,11 +6,11 @@
 /*   By: jnevado- <jnevado-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 17:24:55 by jnevado-          #+#    #+#             */
-/*   Updated: 2022/05/09 14:10:59 by jnevado-         ###   ########.fr       */
+/*   Updated: 2022/05/20 16:15:41 by jnevado-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

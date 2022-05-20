@@ -6,11 +6,11 @@
 /*   By: jnevado- <jnevado-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 15:24:55 by jnevado-          #+#    #+#             */
-/*   Updated: 2022/05/19 18:37:47 by jnevado-         ###   ########.fr       */
+/*   Updated: 2022/05/20 16:16:19 by jnevado-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
